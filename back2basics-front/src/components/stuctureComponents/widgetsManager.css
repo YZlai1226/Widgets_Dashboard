@@ -1,0 +1,23 @@
+.widgetsManager {
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.smallWidget {
+    background-color: rgb(58, 61, 240);
+    width: 400;    
+    margin: 10px;
+    }
+
+.mediumWidget {
+    background-color: #296140;
+    width: 200;    
+    }
+
+.bigWidget {
+    background-color: rgb(118, 50, 50);
+
+width: 200;    
+}
