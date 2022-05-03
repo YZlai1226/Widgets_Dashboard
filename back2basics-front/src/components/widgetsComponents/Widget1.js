@@ -24,7 +24,7 @@ export default function CocktailContainer() {
   }
 
   return (
-    <div>
+    <div class="bigWidget">
       <button onClick={aBoire}>Fetch me a cocktail!</button>
       {
         loaded === true ?

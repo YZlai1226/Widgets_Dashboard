@@ -36,17 +36,6 @@ export default function MangaDex() {
     }
 
     return (
-        <div>
-            <h1> Manga Randomizer </h1>
-            <button onClick={RandomMangadex} > SPIN THE WHEEL </button>
-            {
-                DataisLoaded === true ?
-                    <MangaDexcomponent
-                        manga={manga}
-                    />
-                    :
-                    <h1>  </h1>
-            }
         </div>
     );
 }
