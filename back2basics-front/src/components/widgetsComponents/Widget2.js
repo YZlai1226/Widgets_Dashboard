@@ -6,13 +6,19 @@ function MangaDexcomponent(props) {
         // console.log("PROPS", props);
     }, [props])
     return <>
-        <h2>Titre      : </h2>
-        <h4> {props.manga.title.en}</h4>
-        <h2>Categories : </h2>
-        <h4> {props.manga.tags[0].attributes.name.en}</h4>
-        <h4> {props.manga.tags[1].attributes.name.en}</h4>
-        <h2>Description      : </h2>
-        <h4> {props.manga.description.en}</h4>
+
+{/* implement COVER
+https://api.mangadex.org/swagger.html#/Cover/get-cover
+/cover & /cover/{mangaOrCoverId}
+https://uploads.mangadex.org/covers/{ manga.id }/{ cover.filename }.256.jpg */}
+
+
+        <h2 color="red"> {props.manga.title.en}</h2>
+        {/* <h3>Categories : </h3> */}
+        <h5> {props.manga.tags[0].attributes.name.en}</h5>
+        {/* <h5> {props.manga.tags[1].attributes.name.en}</h5> */}
+        <h3>Description      : </h3>
+        <h5> {props.manga.description.en}</h5>
     </>
 }
 
@@ -28,17 +34,18 @@ export default function MangaDex() {
     
     async function RandomMangadex() {
         const res = await axios.get("https://api.mangadex.org/manga/random?contentRating%5B%5D=safe");
-        // console.log("res", res.data.data.attributes.title.en);
+        console.log("RESPONSE", res );
+        console.log("TITLE : ", res.data.data.attributes.title.en);
         setManga(res.data.data.attributes);
-        // console.log("MANGA PROPs HERE", manga);
+        console.log("MANGA PROPs HERE", manga);
         setDataisLoaded(true);
     }
     
     return (
 
-        <div>
-            <h1> Manga Randomizer </h1>
-            <button onClick={RandomMangadex} > What should I read ?</button>
+        <div class="bigWidget">
+            <h2>Manga Randomizer</h2>
+           <button onClick={RandomMangadex} > Which Manga should I read next?</button>
             {
                 DataisLoaded === true ?
                 <MangaDexcomponent
