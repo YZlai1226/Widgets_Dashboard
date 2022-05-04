@@ -1,6 +1,6 @@
 import Widget1 from './../widgetsComponents/Widget1';
 import Widget2 from './../widgetsComponents/Widget2';
-import Widget3 from './../widgetsComponents/Widget3';
+import WeatherSmall from '../widgetsComponents/WeatherSmall';
 import Widget4 from './../widgetsComponents/Widget4';
 import Widget5 from './../widgetsComponents/Widget5';
 import Widget6 from './../widgetsComponents/Widget6';
@@ -13,15 +13,15 @@ const WidgetsManager = (props) => {
 
     return (
         <div class="widgetsManager">
-            <Widget1 class="smallWidget" />
-            <Widget2 class="smallWidget" />
-            <Widget3 class="smallWidget" />
-            <Widget4 class="mediumWidget" />
-            <Widget5 class="mediumWidget" />
-            <Widget6 class="mediumWidget" />
-            <Widget7 class="bigWidget" />
-            <Widget8 class="bigWidget" />
-            <Widget9 class="bigWidget"/>
+            <Widget1 />
+            <Widget2 />
+            <WeatherSmall />
+            <Widget4 />
+            <Widget5 />
+            <Widget6 />
+            <Widget7 />
+            <Widget8 />
+            <Widget9 />
 
         </div>
     )
