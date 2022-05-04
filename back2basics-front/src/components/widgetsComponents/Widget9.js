@@ -1,6 +1,6 @@
 const Widget9 = (props) => {
     return (
-        <div>
+        <div class="smallWidget">
             <p>I'm Widget 9 !</p>
 
         </div>

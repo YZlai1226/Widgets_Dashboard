@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import './App.css';
 
 function MangaDexcomponent(props) {
     useEffect(() => {
@@ -36,6 +35,7 @@ export default function MangaDex() {
     }
     
     return (
+
         <div>
             <h1> Manga Randomizer </h1>
             <button onClick={RandomMangadex} > What should I read ?</button>
@@ -47,6 +47,7 @@ export default function MangaDex() {
                 :
                     <h1>  </h1>
             }
+
         </div>
     );
 }

@@ -22,7 +22,7 @@ const WidgetsManager = (props) => {
             <Widget7 class="bigWidget" />
             <Widget8 class="bigWidget" />
             <Widget9 class="bigWidget"/>
-            
+
         </div>
     )
 };
