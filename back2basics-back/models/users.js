@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 const Widgets = require('./widgets');
 
 const usersSchema = mongoose.Schema({
@@ -11,5 +12,7 @@ const usersSchema = mongoose.Schema({
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date, default: Date.now },
 });
+
+usersSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model('Users', usersSchema);
