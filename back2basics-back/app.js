@@ -19,6 +19,7 @@ app.use(express.json());
 const serviceRoutes = require('./routes/service');
 const userRoutes = require('./routes/user');
 const widgetRoutes = require('./routes/widget');
+const authRoutes = require('./routes/auth');
 
 
 //middleware
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 app.use('/api/services', serviceRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/widgets', widgetRoutes);
+app.use('/api/auth', authRoutes);
 
 
 module.exports = app;
