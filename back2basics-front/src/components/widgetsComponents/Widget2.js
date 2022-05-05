@@ -52,9 +52,9 @@ export default function MangaDex() {
    
     return (
 
-        <div class="bigWidget">
-            <h2>Manga Randomizer</h2>
-           <button onClick={RandomMangadex} > Which Manga should I read next?</button>
+<div class="bigWidget">
+<h1> Manga Randomizer </h1>
+            <button onClick={RandomMangadex} > What should I read ?</button>
             {
                 DataisLoaded === true ?
                 <MangaDexcomponent
