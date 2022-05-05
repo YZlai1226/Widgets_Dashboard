@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import './WeatherSmall.css';
-// import { SetMealTwoTone } from "@mui/icons-material";
+import './Weather.css';
 
 const WeatherSmall = (props) => {
   const [weather, setWeather] = useState([]);
@@ -19,10 +18,9 @@ const WeatherSmall = (props) => {
   }, [lat, lon]);
 
   const getCity = () => {
-    axios.get(`http://localhost:3001/api/city/${lat}/${lon}`)
+    axios.get(`https://back2basicsweatherservice.herokuapp.com/api/city/${lat}/${lon}`)
       .then(result => {
         setCity(result.data);
-        console.log('city is: ', result.data)
       })
       .catch(err => {
         console.error(err.message, 'GET CITY (front)')
@@ -30,34 +28,31 @@ const WeatherSmall = (props) => {
     }
     
   const getWeather = () => {
-    // if (lat !== '0' && lon !== '0') {
-    axios.get(`http://localhost:3001/api/weather/${lat}/${lon}`)
+    axios.get(`https://back2basicsweatherservice.herokuapp.com/api/weather/${lat}/${lon}`)
       .then(result => {
         setWeather(result.data);
-        console.log('weather is: ', result.data)
       })
       .catch(err => {
         console.error(err.message, 'GET WEITHER (front)')
       })
-      // }
     }
     
     
   if (weather.length !== 0) {
     return (
-      <div class="smallWidget weatherSmall" >
+      <div class="smallWidget weather" >
         {lat !== '0' && lon !== '0' &&
-          <p class="weatherSmallCity" >{city[0]?.name}</p>
+          <p class="weatherCity" >{city[0]?.name}</p>
         }
         {lat === '0' && lon === '0' &&
-          <p class="weatherSmallCity" >{defaultCity}</p>
+          <p class="weatherCity" >{defaultCity}</p>
         }
         <h1 class="weatherSmallTemp" >
-          {Math.round(parseInt(weather.main.temp))}
+          {Math.round(parseInt(weather.main.temp)) + ' °'}
         </h1>
         <p class="weatherSmallFeel" >
           feels like :
-          {Math.round(parseInt(weather.main.feels_like))}
+          {Math.round(parseInt(weather.main.feels_like)) + ' °'}
         </p>
         <img class="weatherSmallImg" src={'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'} alt={weather.weather[0].description}></img>
       </div>

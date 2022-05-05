@@ -16,30 +16,24 @@ const WidgetsManager = (props) => {
     const [lon, setLon] = useState('0');
 
     useEffect(() => {
-        console.log('DEBUG1')
         getPosition();
       }, []);
 
     const getPosition = () => {
-        console.log('DEBUG2', navigator.geolocation)
         
           if (navigator.geolocation  ) {
-        console.log('DEBUG3')
             navigator.geolocation.getCurrentPosition((position) => {
-              console.log('position is: ', position)
               setLat(position.coords.latitude);
               setLon(position.coords.longitude);
             })
-              console.log('navigator.geolocation is: ', navigator.geolocation)
-              console.log('navigator.geolocation.length is: ', navigator.geolocation.length)
         }
       }
 
     return (
         <div class="widgetsManager">
-            <WeatherMedium lat={lat} lon={lon} />
             <Widget1 />
             <Widget2 />
+            <WeatherMedium lat={lat} lon={lon} />
             <WeatherSmall lat={lat} lon={lon} />
             {/* <Widget5 />
             <Widget6 />
