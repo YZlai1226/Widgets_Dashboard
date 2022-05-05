@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 
-import Widget1 from './../widgetsComponents/Widget1';
-=======
 import CocktailsLarge from './../widgetsComponents/cocktails/CocktailsLarge';
->>>>>>> 343048838fa33e4172534c60112980b570ad2f77
-import Widget2 from './../widgetsComponents/Widget2';
 import CocktailsSmall from './../widgetsComponents/cocktails/CocktailsSmall';
 import WeatherSmall from '../widgetsComponents/WeatherSmall';
 import WeatherMedium from './../widgetsComponents/WeatherMedium';
-import Widget5 from './../widgetsComponents/Widget5';
-import Widget6 from './../widgetsComponents/Widget6';
+import MangaLargeSafe from './../widgetsComponents/Manga_Widget/Manga_widget_large';
+import MangaMedium from './../widgetsComponents/Manga_Widget/Manga_widget_medium';
+import MangaLargeXxx from './../widgetsComponents/Manga_Widget/Manga_widget_XXX';
 import Widget7 from './../widgetsComponents/Widget7';
 import Widget8 from './../widgetsComponents/Widget8';
 import Widget9 from './../widgetsComponents/Widget9';
@@ -36,27 +32,16 @@ const WidgetsManager = (props) => {
 
     return (
         <div class="widgetsManager">
-            <CocktailsLarge class="smallWidget" />
-            <Widget2 />
-<<<<<<< HEAD
+            <CocktailsLarge/>
             <WeatherMedium lat={lat} lon={lon} />
             <WeatherSmall lat={lat} lon={lon} />
-            {/* <Widget5 />
-            <Widget6 />
-            <Widget7 />
-            <Widget8 />
-            <Widget9 /> */}
-
-=======
             <CocktailsSmall />
             <WeatherSmall />
-            <Widget4 />
-            <Widget5 />
-            <Widget6 />
+            <MangaLargeSafe />
+            <MangaMedium />
             <Widget7 />
             <Widget8 />
             <Widget9 />
->>>>>>> 343048838fa33e4172534c60112980b570ad2f77
         </div>
     )
 };
