@@ -30,49 +30,47 @@ export default function CocktailContainer() {
       >
         {
           loaded === true ?
-            <div className='cocktailComp'>
+            <div className='cocktailContent'>
               <h3>{cocktail.strDrink}</h3>
-              <div className='cocktailContent'>
-                <p>
-                  {
-                    cocktail.strIngredient1 ?
-                      <span>{cocktail.strIngredient1}</span>
-                      :
-                      <span></span>
-                  }
-                  {
-                    cocktail.strIngredient2 ?
-                      <span>, {cocktail.strIngredient2}</span>
-                      :
-                      <span></span>
-                  }
-                  {
-                    cocktail.strIngredient3 ?
-                      <span>, {cocktail.strIngredient3}</span>
-                      :
-                      <span></span>
-                  }
-                  {
-                    cocktail.strIngredient4 ?
-                      <span>, {cocktail.strIngredient4}</span>
-                      :
-                      <span></span>
-                  }
-                  {
-                    cocktail.strIngredient5 ?
-                      <span>, {cocktail.strIngredient5}</span>
-                      :
-                      <span></span>
-                  }
-                  {
-                    cocktail.strIngredient6 ?
-                      <span>, {cocktail.strIngredient6}</span>
-                      :
-                      <span></span>
-                  }
-                </p>
-                <button onClick={aBoire}>Fetch me another one!</button>
-              </div>
+              <p>
+                {
+                  cocktail.strIngredient1 ?
+                    <span>{cocktail.strIngredient1}</span>
+                    :
+                    <span></span>
+                }
+                {
+                  cocktail.strIngredient2 ?
+                    <span>, {cocktail.strIngredient2}</span>
+                    :
+                    <span></span>
+                }
+                {
+                  cocktail.strIngredient3 ?
+                    <span>, {cocktail.strIngredient3}</span>
+                    :
+                    <span></span>
+                }
+                {
+                  cocktail.strIngredient4 ?
+                    <span>, {cocktail.strIngredient4}</span>
+                    :
+                    <span></span>
+                }
+                {
+                  cocktail.strIngredient5 ?
+                    <span>, {cocktail.strIngredient5}</span>
+                    :
+                    <span></span>
+                }
+                {
+                  cocktail.strIngredient6 ?
+                    <span>, {cocktail.strIngredient6}</span>
+                    :
+                    <span></span>
+                }
+              </p>
+              <button onClick={aBoire}>Fetch me another one!</button>
             </div>
             :
             <p>Loading</p>
