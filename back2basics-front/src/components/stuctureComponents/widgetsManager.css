@@ -16,9 +16,9 @@
     grid-row-end: span 1;
     width: 200px;
     height: 200px;
-    padding: 5px;
+    /* padding: 0px; */
     border-radius: 30px;
-    border: rgb(77, 77, 77) solid;
+    border: rgb(77, 77, 77) solid thin;
     }
 
 .mediumWidget {
@@ -26,10 +26,10 @@
     grid-column-end: span 2;
     grid-row-end: span 1;
     width: 400px;
-    padding: 5px;
+    /* padding: 5px; */
     height: 200px;  
     border-radius: 30px;
-    border: rgb(77, 77, 77) solid;
+    border: rgb(77, 77, 77) solid thin;
     }
 
 .bigWidget {
@@ -37,8 +37,8 @@
     grid-column-end: span 2;
     grid-row-end: span 2;
     width: 400px;
-    padding: 5px;
+    /* padding: 5px; */
     height: 400px;
-    border-radius: 30px;
-    border: rgb(77, 77, 77) solid;
+    border-radius: 15px;
+    border: rgb(77, 77, 77) solid thin;
 }
