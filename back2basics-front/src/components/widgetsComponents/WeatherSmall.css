@@ -1,0 +1,39 @@
+.weatherSmall {
+    background: radial-gradient(circle at 50% 0,
+            #1592ff80,
+            rgba(255, 0, 0, 0) 70.71%),
+        radial-gradient(circle at 6.7% 75%,
+            #045d8d80,
+            rgba(62, 179, 247, 0) 70.71%),
+        radial-gradient(circle at 93.3% 75%,
+            #1976d2,
+            rgba(255, 255, 255, 0) 70.71%) beige;
+    position: relative;
+        }
+
+.weatherSmallCity {
+    text-align: center;
+}
+
+.weatherSmallTemp {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size  : 40px;
+}
+
+.weatherSmallFeel {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 15px;
+    font-size  : 20px;
+
+    text-align: center;
+}
+
+.weatherSmallImg {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 125px;
+    text-align: right;
+}
