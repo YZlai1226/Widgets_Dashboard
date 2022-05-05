@@ -1,0 +1,47 @@
+.cocktailContainer
+{
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.cocktailContainer:hover
+{
+    background-color: blue;
+}
+.cocktailComp
+{
+    color: white;
+    margin-top: -10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.cocktailComp :hover{
+    background-color: brown;
+}
+.cocktailComp h3{
+    margin: 10px;
+}
+.cocktailImage
+{
+    z-index: 0;
+    opacity: 20;
+    width: 100%;
+}
+
+.cocktailContent
+{
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cocktailContent:hover
+{
+    opacity: 100%;
+}

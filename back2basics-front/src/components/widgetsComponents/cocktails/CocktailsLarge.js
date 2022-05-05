@@ -53,7 +53,7 @@ function CocktailComponent(props) {
         <span></span>
     }
     <p><strong>Glass: </strong>{props.cocktail.strGlass}</p>
-    <p>{props.cocktail.strInstructions}</p>
+    <p>{props.cocktail.strInstructions.substring(0, 200)}</p>
   </>
 }
 
@@ -79,6 +79,8 @@ export default function CocktailContainer() {
           :
           <p>Not yet loaded</p>
       }
+      <button onClick={aBoire}>Get me there!</button>
+      <br></br>
       <button onClick={aBoire}>Fetch me another one!</button>
 
     </div>
