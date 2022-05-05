@@ -6,10 +6,17 @@ import './WeatherSmall.css';
 const WeatherSmall = (props) => {
   const [weather, setWeather] = useState([]);
   const [city, setCity] = useState([]);
+//   const [lat, setLat] = useState('0');
+//   const [lon, setLon] = useState('0');
   const defaultCity = 'Null Island';
   const geo = navigator.geolocation;
   const lat = props.lat;
   const lon = props.lon;
+
+//   useEffect(() => {
+//     console.log('DEBUG1')
+//     getPosition();
+//   }, []);
 
   useEffect(() => {
     if ('geolocation' in navigator) {
@@ -42,10 +49,23 @@ const WeatherSmall = (props) => {
       // }
     }
     
+//     const getPosition = () => {
+//     console.log('DEBUG2', navigator.geolocation)
     
+//       if (navigator.geolocation  ) {
+//     console.log('DEBUG3')
+//         navigator.geolocation.getCurrentPosition((position) => {
+//           console.log('position is: ', position)
+//           setLat(position.coords.latitude);
+//           setLon(position.coords.longitude);
+//         })
+//           console.log('navigator.geolocation is: ', navigator.geolocation)
+//           console.log('navigator.geolocation.length is: ', navigator.geolocation.length)
+//     }
+//   }
   if (weather.length !== 0) {
     return (
-      <div class="smallWidget weatherSmall" >
+      <div class="mediumWidget weatherSmall" >
         {lat !== '0' && lon !== '0' &&
           <p class="weatherSmallCity" >{city[0]?.name}</p>
         }
