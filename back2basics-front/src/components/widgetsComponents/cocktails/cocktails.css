@@ -1,0 +1,43 @@
+.cocktailContainer
+{
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.cocktailContainer:hover
+{
+    background-color: blue;
+}
+
+.cocktailContent h3{
+    margin: 10px;
+}
+.cocktailImage
+{
+    z-index: 0;
+    opacity: 20;
+    width: 100%;
+}
+
+.cocktailContent
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cocktailContent:hover
+{
+    background-color: linear-gradient(black, white);;
+    opacity: 100%;
+}

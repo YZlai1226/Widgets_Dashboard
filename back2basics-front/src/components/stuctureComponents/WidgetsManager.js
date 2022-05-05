@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 
 import Widget1 from './../widgetsComponents/Widget1';
+=======
+import CocktailsLarge from './../widgetsComponents/cocktails/CocktailsLarge';
+>>>>>>> 343048838fa33e4172534c60112980b570ad2f77
 import Widget2 from './../widgetsComponents/Widget2';
+import CocktailsSmall from './../widgetsComponents/cocktails/CocktailsSmall';
 import WeatherSmall from '../widgetsComponents/WeatherSmall';
 import WeatherMedium from './../widgetsComponents/WeatherMedium';
 import Widget5 from './../widgetsComponents/Widget5';
@@ -31,8 +36,9 @@ const WidgetsManager = (props) => {
 
     return (
         <div class="widgetsManager">
-            <Widget1 />
+            <CocktailsLarge class="smallWidget" />
             <Widget2 />
+<<<<<<< HEAD
             <WeatherMedium lat={lat} lon={lon} />
             <WeatherSmall lat={lat} lon={lon} />
             {/* <Widget5 />
@@ -41,6 +47,16 @@ const WidgetsManager = (props) => {
             <Widget8 />
             <Widget9 /> */}
 
+=======
+            <CocktailsSmall />
+            <WeatherSmall />
+            <Widget4 />
+            <Widget5 />
+            <Widget6 />
+            <Widget7 />
+            <Widget8 />
+            <Widget9 />
+>>>>>>> 343048838fa33e4172534c60112980b570ad2f77
         </div>
     )
 };
