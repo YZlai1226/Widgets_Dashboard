@@ -1,0 +1,68 @@
+.modalTitle {
+    text-align: center;
+}
+
+.weatherSmallPNG {
+    height: 90px;
+}
+
+.weatherMediumPNG {
+    height: 90px;
+}
+
+.cocktailSmallPNG {
+    height: 90px;
+}
+
+.cocktailBigPNG {
+    height: 180px;
+}
+
+.mediumWidgetPNG {
+    height: 90px;
+}
+
+.bigWidgetPNG {
+    height: 180px;
+}
+
+.services {
+    display            : grid;
+    grid-template-areas: "service1 service2"
+        "service3 service4";
+}
+
+.service1 {
+    grid-area: "service1";
+}
+
+.service1>.serviceContent {
+    margin-top: 60px;
+}
+
+.service2 {
+    grid-area: "service2";
+
+}
+
+.service3 {
+    grid-area: "service3";
+
+}
+
+.service4 {
+    grid-area: "service4";
+
+}
+
+.serviceContent {
+    display       : flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.modalButtons {
+    border    : none;
+    background: none;
+}

@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import axios from '../api/axios'
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthProvider";
+import './Login.css'
 
 const Login = () => {
     let navigate = useNavigate();
@@ -46,24 +47,45 @@ const Login = () => {
   }
 
     return (
-      <form onSubmit={onSubmit}>
-        <h1>Login Below!</h1>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter email"
-          ref={emailInput}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter password"
-          ref={passwordInput}
-          required
-        />
-        <button onClick={onSubmit}>Submit</button>
-      </form>
+      <div style={{ margin: "auto", marginTop: 185 }} class="signIn">
+        <h1>Log In</h1>
+        <div id="sign_in_form">
+          <form onSubmit={onSubmit}>
+            <div class="container">
+              <div class='email_input'>
+                <label class="login_label" htmlFor="email">Email:</label>
+                <br />
+                <input class ='login_input'
+                  type="email"
+                  name="email"
+                  placeholder="Enter email..."
+                  ref={emailInput}
+                  required
+                />
+              </div>
+              <div class='password_input'>
+                <label class="login_label" htmlFor="password">Password:</label>
+                <br />
+                <input class ='login_input'
+                  type="password"
+                  name="password"
+                  placeholder="Enter password..."
+                  ref={passwordInput}
+                  required
+                />
+              </div>
+              <br />
+              <button onClick={onSubmit} class='login_button'>Log in</button>
+            </div>
+          </form>
+        </div>
+        <p>
+          Need an Account?<br />
+          <span className="line">
+            <a href="/register">Sing Up</a>
+          </span>
+        </p>
+      </div>
     );
 }
 export default Login;

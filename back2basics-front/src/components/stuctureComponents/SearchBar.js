@@ -10,10 +10,11 @@ import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import AddModal from './AddModal.js';
 import AuthContext from "../../context/AuthProvider"
+import './SearchBar.css';
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar(props) {
   const navigate = useNavigate()
-  const {auth, setAuth} = useContext(AuthContext);
+  const { auth, setAuth } = useContext(AuthContext);
   const handleLogout = () => {
     localStorage.clear('token');
     setAuth(null);
@@ -29,9 +30,19 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Back2Basics
           </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 4 }}>
-          <AddModal />
-  
+          {
+            auth ? (
+              <>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 4 }}>
+                  <AddModal widgetsList={props.widgetsList} onChange={props.onChange} userId={props.userId} />
+                </Typography>
+              </>
+            ) : (
+              <>
+              </>
+            )
+          }
+
           {/* <IconButton
             size="large"
             edge="start"
@@ -41,19 +52,19 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton> */}
-          </Typography>
           {
-              !auth ? (
-                <>
-          <Button color="inherit" onClick={() => {navigate("/register")}}>Register</Button>
-          <Button color="inherit" onClick={() => {navigate("/login")}}>Login</Button>
-          </>
-          ) : (
-            <>
-          <Button color="inherit" onClick={() => handleLogout()}>Log Out</Button>
-          <Button color="inherit"></Button>
-          </>
-          )
+            !auth ? (
+              <>
+                <Button color="inherit" onClick={() => { navigate("/register") }}>Register</Button>
+                <Button color="inherit" onClick={() => { navigate("/login") }}>Login</Button>
+              </>
+            ) : (
+              <>
+                {/* <Button color="inherit" onClick={() => {navigate("/dashboard")}}>Dashboard</Button> */}
+                <Button color="inherit" onClick={() => handleLogout()}>Log Out</Button>
+                <Button color="inherit"></Button>
+              </>
+            )
           }
         </Toolbar>
       </AppBar>

@@ -33,7 +33,7 @@ const WeatherSmall = (props) => {
         setWeather(result.data);
       })
       .catch(err => {
-        console.error(err.message, 'GET WEITHER (front)')
+        console.error(err.message, 'GET WEATHER (front)')
       })
     }
     

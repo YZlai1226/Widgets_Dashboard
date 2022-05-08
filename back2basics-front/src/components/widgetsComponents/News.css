@@ -1,0 +1,89 @@
+/* =======  Tech News  =======*/
+
+#NewsTechMedium
+{
+    /* background: linear-gradient(-45deg, #122538, #d1dde6); */
+    background: linear-gradient(-45deg, #495c8a, #ffffff);
+    /* background: linear-gradient(-45deg, #ffaa3b, #e4e8eb); */
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.newTechTop {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-bottom: -20px;
+}
+
+.newsTechContent {
+    display: flex;
+    flex-direction: row;
+}
+
+/* =======  Health News  =======*/
+
+#NewsHealthMedium
+{
+    /* background: linear-gradient(-45deg, #122538, #d1dde6); */
+    background: linear-gradient(-45deg, #495c8a, #ffffff);
+    /* background: linear-gradient(-45deg, #ffaa3b, #e4e8eb); */
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.newHealthTop {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-bottom: -20px;
+}
+
+.newsHealthContent {
+    display: flex;
+    flex-direction: row;
+}
+
+/* =======  BOTH  =======*/
+
+.newsHeading {
+    width: 100%;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 18px;
+    color:darkred;
+}
+
+.newsTitle {
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 13px;
+}
+
+.newsSource {
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: -24px;
+    margin-left: 13px;
+}
+
+.newsImage {
+    width: 122px;
+    height: 122px;
+    margin-right: 13px;
+    border-radius: 13px;
+    margin-top: 3px;
+}
+.newsTitle:hover, .newsTitle:active {text-decoration: underline;}
+
+.loading {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}

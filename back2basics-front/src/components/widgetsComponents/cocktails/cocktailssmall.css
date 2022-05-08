@@ -1,0 +1,83 @@
+.cocktailContainer
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+.cocktailPicture
+{
+    z-index: 0;
+    width: 100%;
+    transition: .5s;
+}
+.cocktailContainer:hover > .cocktailPicture
+{
+    transform: scale(1.1);
+}
+.cocktailShade
+{
+    position: absolute;
+    margin-top: -205px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8)0%,
+        rgba(0, 0, 0, 0)25%,
+        rgba(0, 0, 0, 0)100%
+    );
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
+.cocktailName
+{
+    color: white;
+    font-weight: bolder;
+    z-index: 10;
+}
+.cocktailContent
+{
+    position: absolute;
+    margin-top: -200px;
+    width: 200px;
+    height: 195px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    opacity: 0%;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cocktailContent:hover
+{
+    opacity: 100%;
+}
+.cocktailContent p{
+    font-size: smaller;
+    margin: 5px;
+}
+.cocktailIngredients
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.cocktailsicon
+{
+    color: white;
+}
+.cocktailssmallbuttons
+{
+    margin-bottom: 0px;
+}
+.ssite
+{
+    position: absolute;
+}

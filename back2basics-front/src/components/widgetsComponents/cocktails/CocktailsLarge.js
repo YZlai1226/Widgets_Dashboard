@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './cocktails.css';
+//import './cocktaillarge.css';
 
 function CocktailComponent(props) {
-  console.log(props);
+  // console.log(props);
   /* useEffect(() => {
     console.log('props:', props)
   }, [props]) */

@@ -38,8 +38,6 @@ const WeatherMedium = (props) => {
     axios.get(`https://back2basicsweatherservice.herokuapp.com/api/forecast/${lat}/${lon}`)
       .then(result => {
         setForecast(result.data);
-        console.log('forecast is: ', result.data)
-        console.log('forecast first day is: ', forecast.daily[0])
       })
       .catch(err => {
         console.error(err.message, 'GET WEITHER (front)')
