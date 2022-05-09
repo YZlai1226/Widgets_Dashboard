@@ -54,7 +54,7 @@ export default function MangaDex() {
                     <p>Building up the manga library</p>
             }
 
-            <button class="MangaBigButton" onClick={RandomMangadex} > <img src="https://i.imgur.com/zd4Afyz.png" /> </button>
+            <button class="MangaBigButton" onClick={RandomMangadex} > <img src="https://i.imgur.com/zd4Afyz.png" height={20} width={20} /> </button>
 
         </div>
     );
